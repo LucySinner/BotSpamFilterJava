@@ -37,7 +37,7 @@ public class SpamFilter extends ListenerAdapter {
             if (Messgaeciunter >= maxAllowedMSGsWithinSeconds) {
                 event.getChannel().sendMessage("Please do not Spam!").queue();
                 event.getMessage().delete().queue();
-                System.out.println("Spam Detected! | Message has been Deteled from " + event.getAuthor().getAsTag() + " >> " + message);
+                System.out.println("Spam Detected! | Message has been Deleted from " + event.getAuthor().getAsTag() + " >> " + message);
                 messageCounter.put(userID, 0); // Reset Counter
             }
         } else {
@@ -46,3 +46,4 @@ public class SpamFilter extends ListenerAdapter {
         }
     }
 }
+
